@@ -1,5 +1,5 @@
 FROM node:latest
-MAINTAINER Ivan Vanderbyl <ivan@flood.io>
+MAINTAINER Syrus Akbary <syrus@try.com>
 
 # Based on instructions at https://github.com/segmentio/nightmare/issues/224
 
@@ -47,6 +47,4 @@ ADD . .
 
 COPY entrypoint.sh /entrypoint
 RUN chmod +x /entrypoint
-ENTRYPOINT ["/entrypoint", "node", "--harmony-async-await"]
-
-CMD ["index.js"]
+ENTRYPOINT ["/entrypoint"]
